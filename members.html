@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gen Z Project</title>
+  <link rel="stylesheet" href="style_page.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+ <nav class="navbar">
+      <div class="nav-links" style="font-size: 1.35em;"> <a href="index.html">Gen Z Team</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+    </nav>
+
+<main class="container">
+
+    <div class="members-grid" id="membersGrid">
+
+    </div>
+
+</main>
+
+<script src="members.js"></script>
+
+<script>
+  const container = document.getElementById("membersGrid");
+
+  members.forEach(member => {
+    container.innerHTML += `
+      <div class="member-card">
+        <img src="${member.img}" alt="${member.name}">
+        <h3>${member.name}</h3>
+        <p>ID: ${member.id}</p>
+      </div>
+    `;
+  });
+</script>
+
+
+<footer>
+    <p>© 2025 Gen Z Team — All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
